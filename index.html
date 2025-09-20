@@ -169,6 +169,9 @@
             box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
             animation: slideIn 1s ease-out;
         }
+        .titulo-prov::before {
+            content: "📍 ";
+        }
         .seccion-legislativo h3 {
             text-align: center;
             background: linear-gradient(135deg, #f0e6ff, #d9c2ff);
@@ -186,9 +189,6 @@
         }
         .seccion-legislativo[data-position-type="diputados"] h3::before {
             content: "🦁 "; /* Ícono para diputados */
-        }
-        .titulo-prov::before {
-            content: "📍 "; /* Ícono para provincia */
         }
         .candidatos-container {
             display: flex;
@@ -249,7 +249,6 @@
         .candidatos-container.two-different-positions .candidato {
             width: 80%;
         }
-        /* Estilos para los contenedores de información */
         .contenedores-info {
             display: flex;
             justify-content: space-around;
@@ -430,20 +429,16 @@
             </div>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSeB_x3qDbYWd4E14Cv5y83gq1rKRe4Ol16yhsUp2pZjzPGlrA/viewform" target="_blank" class="boton-fiscal">¡Hacéte Fiscal Ahora!</a>
         </div>
-        <!-- Nueva cinta de agradecimiento estática con enlaces -->
         <div class="agradecimiento-cinta">
             ¡Agradecimiento especial a <a href="https://x.com/Antonel16603381" target="_blank">@Antonel16603381</a> por proporcionar la información en el hilo <a href="https://x.com/Antonel16603381/status/1966558039080636662" target="_blank">https://x.com/Antonel16603381/status/1966558039080636662</a>! Tu aporte es invaluable para este proyecto! 🎉
         </div>
-        <!-- Nuevos contenedores (reubicados abajo) -->
         <div class="contenedores-info">
-            <!-- Contenedor 1: Padrón Electoral -->
             <div class="contenedor-info">
                 <h2>¡Verificá tus datos en el Padrón! 📋</h2>
                 <p>Asegurate de que tus datos estén correctos. Si hay errores, reclamá hasta el <strong>26 de septiembre</strong> en la Cámara Nacional Electoral.</p>
                 <p>Buscá <em>Reclamos</em> abajo a la derecha.</p>
                 <a href="https://www.padron.gob.ar/" target="_blank" class="boton-info">Consultar Padrón</a>
             </div>
-            <!-- Contenedor 2: Recomendaciones -->
             <div class="contenedor-info">
                 <h2>Preparate para votar ✍️</h2>
                 <p>Llevá tu <strong>lapicera</strong> para evitar problemas.</p>
@@ -511,67 +506,67 @@
                 diputados: [{ nombre: 'Gonzalo Roca', twitter: 'GonzaRocaCBA', lista: '504' }]
             },
             'CORRIENTES': {
-                deputados: [{ nombre: 'Virgina Gallardo', twitter: 'virchugallardo', lista: '501' }]
+                diputados: [{ nombre: 'Virgina Gallardo', twitter: 'virchugallardo', lista: '501' }]
             },
             'ENTRE RIOS': {
                 senadores: [{ nombre: 'Joaquín Benegas Lynch', twitter: 'Joacobl75', lista: '502' }],
-                deputados: [{ nombre: 'Andrés Laumann', twitter: 'AndresLaumann', lista: '502' }]
+                diputados: [{ nombre: 'Andrés Laumann', twitter: 'AndresLaumann', lista: '502' }]
             },
             'FORMOSA': {
-                deputados: [{ nombre: 'Atilio Basualdo', twitter: 'AtilioBasualdo', lista: '504' }]
+                diputados: [{ nombre: 'Atilio Basualdo', twitter: 'AtilioBasualdo', lista: '504' }]
             },
             'JUJUY': {
-                deputados: [{ nombre: 'Alfi Gonzales', twitter: 'alfigonzalesok', lista: '502' }]
+                diputados: [{ nombre: 'Alfi Gonzales', twitter: 'alfigonzalesok', lista: '502' }]
             },
             'LA PAMPA': {
-                deputados: [{ nombre: 'Adrian Ravier', twitter: 'AdrianRavier', lista: '501' }]
+                diputados: [{ nombre: 'Adrian Ravier', twitter: 'AdrianRavier', lista: '501' }]
             },
             'LA RIOJA': {
-                deputados: [{ nombre: 'Gino Visconti', twitter: 'ViscontiGinoOk', lista: '187' }]
+                diputados: [{ nombre: 'Gino Visconti', twitter: 'ViscontiGinoOk', lista: '187' }]
             },
             'MENDOZA': {
-                deputados: [{ nombre: 'Luis Petri', twitter: 'luispetri', lista: '505' }]
+                diputados: [{ nombre: 'Luis Petri', twitter: 'luispetri', lista: '505' }]
             },
             'MISIONES': {
-                deputados: [{ nombre: 'Diego Hartfield', twitter: 'Diego_Hartfield', lista: '503' }]
+                diputados: [{ nombre: 'Diego Hartfield', twitter: 'Diego_Hartfield', lista: '503' }]
             },
             'NEUQUEN': {
                 senadores: [{ nombre: 'Nadia Marquez', twitter: 'nadiajmarquez', lista: '96' }],
-                deputados: [{ nombre: 'Gaston Riesco', twitter: 'GastonRiesco', lista: '96' }]
+                diputados: [{ nombre: 'Gaston Riesco', twitter: 'GastonRiesco', lista: '96' }]
             },
             'PBA': {
-                deputados: [{ nombre: 'Jose Luis Espert', twitter: 'jlespert', lista: '503' }]
+                diputados: [{ nombre: 'Jose Luis Espert', twitter: 'jlespert', lista: '503' }]
             },
             'RIO NEGRO': {
                 senadores: [{ nombre: 'Lorena Villaverde', twitter: 'LoreVillaverde1', lista: '504' }],
-                deputados: [{ nombre: 'Anibal Tortoriello', twitter: 'ATortorielloOk', lista: '504' }]
+                diputados: [{ nombre: 'Anibal Tortoriello', twitter: 'ATortorielloOk', lista: '504' }]
             },
             'SALTA': {
                 senadores: [{ nombre: 'Emilia Orozco', twitter: 'MariaEmiliaOro', lista: '96' }],
-                deputados: [{ nombre: 'Gabriela Flores', twitter: 'LLASALTA', lista: '96' }]
+                diputados: [{ nombre: 'Gabriela Flores', twitter: 'LLASALTA', lista: '96' }]
             },
             'SAN JUAN': {
-                deputados: [{ nombre: 'Abel Chiconi', twitter: 'abelchiconiok', lista: '196' }]
+                diputados: [{ nombre: 'Abel Chiconi', twitter: 'abelchiconiok', lista: '196' }]
             },
             'SAN LUIS': {
-                deputados: [{ nombre: 'Monica Becerra', twitter: 'monicabecerraok', lista: '502' }]
+                diputados: [{ nombre: 'Monica Becerra', twitter: 'monicabecerraok', lista: '502' }]
             },
             'SANTA CRUZ': {
-                deputados: [{ nombre: 'Jairo Guzman', twitter: 'Jairo_Henoch', lista: '96' }]
+                diputados: [{ nombre: 'Jairo Guzman', twitter: 'Jairo_Henoch', lista: '96' }]
             },
             'SANTA FE': {
-                deputados: [{ nombre: 'Agustin Pellegrini', twitter: 'apellegrini2000', lista: '96' }]
+                diputados: [{ nombre: 'Agustin Pellegrini', twitter: 'apellegrini2000', lista: '96' }]
             },
             'SANTIAGO DEL ESTERO': {
                 senadores: [{ nombre: 'Tomas Figueroa', twitter: 'TomasFigueok', lista: '96' }],
-                deputados: [{ nombre: 'Laura Godoy', twitter: 'lauragodoy428', lista: '96' }]
+                diputados: [{ nombre: 'Laura Godoy', twitter: 'lauragodoy428', lista: '96' }]
             },
             'TIERRA DEL FUEGO': {
                 senadores: [{ nombre: 'Agustin Coto', twitter: 'agustcot', lista: '504' }],
-                deputados: [{ nombre: 'Miguel Rodriguez', twitter: 'MigueMiguerrock', lista: '504' }]
+                diputados: [{ nombre: 'Miguel Rodriguez', twitter: 'MigueMiguerrock', lista: '504' }]
             },
             'TUCUMAN': {
-                deputados: [{ nombre: 'Federico Pelli', twitter: 'pellifederico', lista: '502' }]
+                diputados: [{ nombre: 'Federico Pelli', twitter: 'pellifederico', lista: '502' }]
             },
             'todas': 'CABA'
         };
