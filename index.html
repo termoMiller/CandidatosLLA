@@ -8,8 +8,8 @@
         body {
             font-family: 'Arial', sans-serif;
             background-image: url('https://i.ibb.co/Z6Q29JdX/crear-fondo-violeta.png');
-            background-repeat: repeat; /* Repite la imagen como mosaico */
-            background-color: #6a0dad; /* Color de fondo por si la imagen no carga, opcional */
+            background-repeat: repeat;
+            background-color: #6a0dad;
             margin: 0;
             padding: 20px;
             color: #333;
@@ -17,95 +17,204 @@
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            background-color: white;
+            background-color: rgba(255, 255, 255, 0.9);
             padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
         }
         .banner {
             text-align: center;
-            background-color: #6a0dad;
+            background: linear-gradient(90deg, #6a0dad, #8a2be2, #a349a4);
             color: white;
-            padding: 30px;
-            border-radius: 10px;
+            padding: 40px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            font-size: 2.2em;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        .fiscalizacion {
+            text-align: center;
+            background: linear-gradient(135deg, #6a0dad, #8a2be2);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
             margin-bottom: 20px;
             font-size: 1.5em;
             font-weight: bold;
         }
-        .subtitulo {
-            text-align: center;
-            margin-bottom: 20px;
+        .fiscalizacion a {
+            color: yellow;
+            text-decoration: underline;
             font-size: 1.2em;
+        }
+        .fiscalizacion a:hover {
+            color: #fff;
+        }
+        .fiscalizacion .boton-fiscal {
+            display: inline-block;
+            background-color: #ffd700;
             color: #6a0dad;
+            padding: 15px 30px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+        .fiscalizacion .boton-fiscal:hover {
+            transform: scale(1.1);
+            background-color: #ffca28;
         }
         .enlaces-lista {
             display: flex;
-            justify-content: space-around;
+            justify-content: center;
             flex-wrap: wrap;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
+            gap: 20px;
         }
         .enlace-item {
             text-align: center;
-            margin: 10px;
+            padding: 15px 25px;
+            background-color: #f5f5f5;
+            border: 3px solid #6a0dad;
+            border-radius: 15px;
+            transition: transform 0.2s;
+            width: 200px;
         }
         .enlace-item a {
             color: #6a0dad;
             text-decoration: none;
             font-weight: bold;
+            font-size: 1.2em;
         }
         .enlace-item a:hover {
             text-decoration: underline;
         }
+        .enlace-item:hover {
+            transform: scale(1.05);
+            background-color: #e0e0e0;
+        }
+        .agradecimiento-cinta {
+            background: linear-gradient(90deg, #6a0dad, #8a2be2, #a349a4);
+            color: white;
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 1.1em;
+            font-weight: bold;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+        .agradecimiento-cinta a {
+            color: #ffd700;
+            text-decoration: underline;
+            transition: color 0.2s;
+        }
+        .agradecimiento-cinta a:hover {
+            color: #fff;
+        }
         .seleccion-prov {
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 40px;
             font-weight: bold;
             color: #6a0dad;
+            background: linear-gradient(135deg, #f0e6ff, #d9c2ff);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            animation: slideIn 1s ease-out;
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         select {
-            padding: 10px;
-            font-size: 1em;
-            border: 2px solid #6a0dad;
-            border-radius: 5px;
-            background-color: white;
+            padding: 15px 50px 15px 40px;
+            font-size: 1.2em;
+            border: 4px solid #6a0dad;
+            border-radius: 15px;
+            background-color: #fff;
+            appearance: none;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="%236a0dad"><path d="M2 4l6 6 6-6H2z"/></svg>'), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="%236a0dad"><path d="M10 2a8 8 0 100 16 8 8 0 000-16zm0 14a6 6 0 110-12 6 6 0 010 12z"/><circle cx="10" cy="10" r="3"/></svg>');
+            background-repeat: no-repeat;
+            background-position: right 20px center, left 10px center;
+            cursor: pointer;
+            transition: box-shadow 0.2s, transform 0.2s;
+        }
+        select:hover {
+            transform: scale(1.02);
+        }
+        select:focus {
+            outline: none;
+            box-shadow: 0 0 15px #6a0dad;
         }
         .titulo-prov {
             text-align: center;
-            margin: 20px 0;
-            font-size: 1.3em;
+            margin: 40px 0;
+            font-size: 1.7em;
             color: #6a0dad;
             font-weight: bold;
+            text-transform: uppercase;
+            background: linear-gradient(135deg, #f0e6ff, #d9c2ff);
+            padding: 15px;
+            border-radius: 15px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            animation: slideIn 1s ease-out;
         }
         .seccion-legislativo h3 {
             text-align: center;
+            background: linear-gradient(135deg, #f0e6ff, #d9c2ff);
             color: #6a0dad;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            text-transform: uppercase;
+            padding: 10px 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            animation: slideIn 1s ease-out;
+        }
+        .seccion-legislativo h3::before {
+            content: "👑 "; /* Ícono para senadores */
+        }
+        .seccion-legislativo[data-position-type="diputados"] h3::before {
+            content: "🎙️ "; /* Ícono para diputados */
+        }
+        .titulo-prov::before {
+            content: "📍 "; /* Ícono para provincia */
         }
         .candidatos-container {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 25px;
             flex-wrap: wrap;
             margin-bottom: 20px;
         }
         .candidato {
-            border: 2px solid #6a0dad;
+            border: 3px solid #6a0dad;
             border-radius: 50px;
-            padding: 10px;
+            padding: 15px;
             background-color: white;
             transition: transform 0.2s;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            min-height: 300px;
+            min-height: 320px;
         }
         .candidato:hover {
             transform: scale(1.05);
         }
         .candidato .name {
-            font-size: 1.1em;
+            font-size: 1.2em;
             font-weight: bold;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             text-align: center;
         }
         .candidato img {
@@ -113,12 +222,12 @@
             height: 100%;
             object-fit: contain;
             border-radius: 10px;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
         .candidato .lista {
-            font-size: 0.9em;
+            font-size: 1em;
             color: #6a0dad;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             text-align: center;
         }
         .candidato .twitter-link {
@@ -140,6 +249,71 @@
         .candidatos-container.two-different-positions .candidato {
             width: 80%;
         }
+        /* Estilos para los contenedores de información */
+        .contenedores-info {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+            margin: 20px 0;
+            padding: 0 20px;
+        }
+        .contenedor-info {
+            background: linear-gradient(135deg, #f0e6ff, #fff);
+            border: 2px solid #6a0dad;
+            border-radius: 10px;
+            padding: 10px;
+            flex: 1;
+            text-align: center;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+            max-width: 30%;
+            font-size: 0.9em;
+        }
+        .contenedor-info h2 {
+            font-size: 1.1em;
+            color: #6a0dad;
+            margin-bottom: 8px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .contenedor-info p {
+            font-size: 0.85em;
+            color: #333;
+            line-height: 1.4;
+            margin-bottom: 8px;
+        }
+        .contenedor-info .boton-info {
+            display: inline-block;
+            background-color: #6a0dad;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 8px;
+            transition: background-color 0.2s;
+        }
+        .contenedor-info .boton-info:hover {
+            background-color: #4500a0;
+        }
+        .contenedor-info .boton-simulador {
+            display: inline-block;
+            background-color: #6a0dad;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 5px;
+            font-size: 0.8em;
+            transition: background-color 0.2s;
+        }
+        .contenedor-info .boton-simulador:hover {
+            background-color: #4500a0;
+        }
+        .contenedor-info p.warning {
+            color: #d32f2f;
+            font-weight: bold;
+        }
         @media (max-width: 1024px) {
             .candidatos-container {
                 flex-direction: column;
@@ -152,6 +326,13 @@
             .enlaces-lista {
                 flex-direction: column;
             }
+            .contenedores-info {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .contenedor-info {
+                max-width: 100%;
+            }
         }
         @media (max-width: 768px) {
             .candidato {
@@ -160,20 +341,66 @@
             .container {
                 padding: 10px;
             }
-        }
-        @media (max-width: 480px) {
             .banner {
-                padding: 20px;
-                font-size: 1.2em;
+                font-size: 1.8em;
+                padding: 25px;
             }
-            .subtitulo {
-                font-size: 1em;
+            .fiscalizacion {
+                font-size: 1.3em;
+                padding: 15px;
             }
             .enlaces-lista .enlace-item {
-                margin: 5px 0;
+                margin: 10px 0;
+                width: 100%;
             }
             .candidato {
                 max-width: 250px;
+            }
+            .contenedor-info h2 {
+                font-size: 1em;
+            }
+            .contenedor-info p {
+                font-size: 0.8em;
+            }
+            .contenedor-info .boton-info {
+                padding: 6px 12px;
+                font-size: 0.9em;
+            }
+            .seleccion-prov {
+                padding: 15px;
+            }
+            select {
+                padding: 10px 35px 10px 30px;
+            }
+            .agradecimiento-cinta {
+                font-size: 1em;
+            }
+        }
+        @media (max-width: 480px) {
+            .banner {
+                font-size: 1.5em;
+                padding: 20px;
+            }
+            .fiscalizacion {
+                font-size: 1.1em;
+            }
+            .seleccion-prov {
+                font-size: 0.9em;
+            }
+            select {
+                font-size: 1em;
+                padding: 10px 35px 10px 25px;
+            }
+            .enlaces-lista .enlace-item {
+                padding: 10px;
+            }
+            .titulo-prov, .seccion-legislativo h3 {
+                font-size: 1.3em;
+                padding: 8px 15px;
+            }
+            .agradecimiento-cinta {
+                font-size: 0.9em;
+                padding: 10px 15px;
             }
         }
     </style>
@@ -183,26 +410,49 @@
         <div class="banner">
             Conocé a los Candidatos de La Libertad Avanza
         </div>
-        <div class="subtitulo">
-            Unite a la Legión de FISCALES que va a defender el proyecto de LA LIBERTAD y de JAVIER MILEI, 
-            completá este formulario (<a href="https://docs.google.com/forms/d/e/1FAIpQLSeB_x3qDbYWd4E14Cv5y83gq1rKRe4Ol16yhsUp2pZjzPGlrA/viewform" target="_blank">enlace al formulario</a>) o contactalos AQUÍ
+        <div class="fiscalizacion">
+            ¡Únete a la Legión de FISCALES que va a defender el proyecto de LA LIBERTAD y de JAVIER MILEI! 
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeB_x3qDbYWd4E14Cv5y83gq1rKRe4Ol16yhsUp2pZjzPGlrA/viewform" target="_blank">Completá el formulario</a> 
+            o contactalos a través de:
+            <div class="enlaces-lista">
+                <div class="enlace-item">
+                    <a href="https://x.com/enelojodelpoder" target="_blank">1) En el Ojo del Poder</a>
+                </div>
+                <div class="enlace-item">
+                    <a href="https://x.com/matias_vorrath" target="_blank">2) Matias Vorrath</a>
+                </div>
+                <div class="enlace-item">
+                    <a href="https://x.com/OliviaGagliesi" target="_blank">3) Olivia Gagliesi</a>
+                </div>
+                <div class="enlace-item">
+                    <a href="https://x.com/evaraaranda" target="_blank">4) Eva Aranda</a>
+                </div>
+            </div>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeB_x3qDbYWd4E14Cv5y83gq1rKRe4Ol16yhsUp2pZjzPGlrA/viewform" target="_blank" class="boton-fiscal">¡Hacéte Fiscal Ahora!</a>
         </div>
-        <div class="enlaces-lista">
-            <div class="enlace-item">
-                <a href="https://x.com/enelojodelpoder" target="_blank">1) En el Ojo del Poder</a>
+        <!-- Nueva cinta de agradecimiento estática con enlaces -->
+        <div class="agradecimiento-cinta">
+            ¡Agradecimiento especial a <a href="https://x.com/Antonel16603381" target="_blank">@Antonel16603381</a> por proporcionar la información en el hilo <a href="https://x.com/Antonel16603381/status/1966558039080636662" target="_blank">https://x.com/Antonel16603381/status/1966558039080636662</a>! Tu aporte es invaluable para este proyecto! 🎉
+        </div>
+        <!-- Nuevos contenedores (reubicados abajo) -->
+        <div class="contenedores-info">
+            <!-- Contenedor 1: Padrón Electoral -->
+            <div class="contenedor-info">
+                <h2>¡Verificá tus datos en el Padrón! 📋</h2>
+                <p>Asegurate de que tus datos estén correctos. Si hay errores, reclamá hasta el <strong>26 de septiembre</strong> en la Cámara Nacional Electoral.</p>
+                <p>Buscá <em>Reclamos</em> abajo a la derecha.</p>
+                <a href="https://www.padron.gob.ar/" target="_blank" class="boton-info">Consultar Padrón</a>
             </div>
-            <div class="enlace-item">
-                <a href="https://x.com/matias_vorrath" target="_blank">2) Matias Vorrath</a>
-            </div>
-            <div class="enlace-item">
-                <a href="https://x.com/OliviaGagliesi" target="_blank">3) Olivia Gagliesi</a>
-            </div>
-            <div class="enlace-item">
-                <a href="https://x.com/evaraaranda" target="_blank">4) Eva Aranda</a>
+            <!-- Contenedor 2: Recomendaciones -->
+            <div class="contenedor-info">
+                <h2>Preparate para votar ✍️</h2>
+                <p>Llevá tu <strong>lapicera</strong> para evitar problemas.</p>
+                <p class="warning">⚠️ <strong>Atención:</strong> Si en tu provincia se eligen <strong>senadores</strong> y <strong>diputados</strong>, la boleta tiene <strong>dos cuerpos</strong> (uno por categoría) y debés marcar <strong>ambas opciones</strong> para que tu voto sea válido. Si solo se eligen <strong>diputados</strong>, tiene <strong>un solo cuerpo</strong>. ¡Practicá con este simulador oficial!</p>
+                <a href="https://www.argentina.gob.ar/elecciones-2025/simulador-de-boleta-unica-papel" target="_blank" class="boton-simulador">Simulador de Boleta</a>
             </div>
         </div>
         <div class="seleccion-prov">
-            Seleccione su provincia:
+            📍 Seleccione su provincia:
             <select id="provinciaSelect">
                 <option value="todas">Todas</option>
                 <option value="CABA">Ciudad Autónoma de Buenos Aires</option>
@@ -248,80 +498,80 @@
                 ]
             },
             'CATAMARCA': {
-                diputados: [{ nombre: 'Adrián Brizuela', twitter: 'Brizuela2Adrian' , instagram: 'brizuelaadriaan', lista: '504' }]
+                diputados: [{ nombre: 'Adrián Brizuela', twitter: 'Brizuela2Adrian', instagram: 'brizuelaadriaan', lista: '504' }]
             },
             'CHACO': {
                 senadores: [{ nombre: 'Juan Cruz Godoy', twitter: 'JuanCruzGodoy95', lista: '503' }],
                 diputados: [{ nombre: 'Mercedes del Rosario Goitia', twitter: 'LLA_Chaco', lista: '503' }]
             },
             'CHUBUT': {
-                diputados: [{ nombre: 'Maira Raquel Frias',twitter: 'MairaFrias2025', lista: '96' }]
+                diputados: [{ nombre: 'Maira Raquel Frias', twitter: 'MairaFrias2025', lista: '96' }]
             },
             'CORDOBA': {
                 diputados: [{ nombre: 'Gonzalo Roca', twitter: 'GonzaRocaCBA', lista: '504' }]
             },
             'CORRIENTES': {
-                diputados: [{ nombre: 'Virgina Gallardo', twitter: 'virchugallardo', lista: '501' }]
+                deputados: [{ nombre: 'Virgina Gallardo', twitter: 'virchugallardo', lista: '501' }]
             },
             'ENTRE RIOS': {
                 senadores: [{ nombre: 'Joaquín Benegas Lynch', twitter: 'Joacobl75', lista: '502' }],
-                diputados: [{ nombre: 'Andrés Laumann', twitter: 'AndresLaumann', lista: '502' }]
+                deputados: [{ nombre: 'Andrés Laumann', twitter: 'AndresLaumann', lista: '502' }]
             },
             'FORMOSA': {
-                diputados: [{ nombre: 'Atilio Basualdo', twitter: 'AtilioBasualdo', lista: '504' }]
+                deputados: [{ nombre: 'Atilio Basualdo', twitter: 'AtilioBasualdo', lista: '504' }]
             },
             'JUJUY': {
-                diputados: [{ nombre: 'Alfi Gonzales', twitter: 'alfigonzalesok', lista: '502' }]
+                deputados: [{ nombre: 'Alfi Gonzales', twitter: 'alfigonzalesok', lista: '502' }]
             },
             'LA PAMPA': {
-                diputados: [{ nombre: 'Adrian Ravier', twitter: 'AdrianRavier', lista: '501' }]
+                deputados: [{ nombre: 'Adrian Ravier', twitter: 'AdrianRavier', lista: '501' }]
             },
             'LA RIOJA': {
-                diputados: [{ nombre: 'Gino Visconti', twitter: 'ViscontiGinoOk', lista: '187' }]
+                deputados: [{ nombre: 'Gino Visconti', twitter: 'ViscontiGinoOk', lista: '187' }]
             },
             'MENDOZA': {
-                diputados: [{ nombre: 'Luis Petri', twitter: 'luispetri', lista: '505' }]
+                deputados: [{ nombre: 'Luis Petri', twitter: 'luispetri', lista: '505' }]
             },
             'MISIONES': {
-                diputados: [{ nombre: 'Diego Hartfield', twitter: 'Diego_Hartfield', lista: '503' }]
+                deputados: [{ nombre: 'Diego Hartfield', twitter: 'Diego_Hartfield', lista: '503' }]
             },
             'NEUQUEN': {
                 senadores: [{ nombre: 'Nadia Marquez', twitter: 'nadiajmarquez', lista: '96' }],
-                diputados: [{ nombre: 'Gaston Riesco', twitter: 'GastonRiesco', lista: '96' }]
+                deputados: [{ nombre: 'Gaston Riesco', twitter: 'GastonRiesco', lista: '96' }]
             },
             'PBA': {
-                diputados: [{ nombre: 'Jose Luis Espert', twitter: 'jlespert', lista: '503' }]
+                deputados: [{ nombre: 'Jose Luis Espert', twitter: 'jlespert', lista: '503' }]
             },
             'RIO NEGRO': {
                 senadores: [{ nombre: 'Lorena Villaverde', twitter: 'LoreVillaverde1', lista: '504' }],
-                diputados: [{ nombre: 'Anibal Tortoriello', twitter: 'ATortorielloOk', lista: '504' }]
+                deputados: [{ nombre: 'Anibal Tortoriello', twitter: 'ATortorielloOk', lista: '504' }]
             },
             'SALTA': {
                 senadores: [{ nombre: 'Emilia Orozco', twitter: 'MariaEmiliaOro', lista: '96' }],
-                diputados: [{ nombre: 'Gabriela Flores', twitter: 'LLASALTA', lista: '96' }]
+                deputados: [{ nombre: 'Gabriela Flores', twitter: 'LLASALTA', lista: '96' }]
             },
             'SAN JUAN': {
-                diputados: [{ nombre: 'Abel Chiconi', twitter: 'abelchiconiok', lista: '196' }]
+                deputados: [{ nombre: 'Abel Chiconi', twitter: 'abelchiconiok', lista: '196' }]
             },
             'SAN LUIS': {
-                diputados: [{ nombre: 'Monica Becerra', twitter: 'monicabecerraok', lista: '502' }]
+                deputados: [{ nombre: 'Monica Becerra', twitter: 'monicabecerraok', lista: '502' }]
             },
             'SANTA CRUZ': {
-                diputados: [{ nombre: 'Jairo Guzman', twitter: 'Jairo_Henoch', lista: '96' }]
+                deputados: [{ nombre: 'Jairo Guzman', twitter: 'Jairo_Henoch', lista: '96' }]
             },
             'SANTA FE': {
-                diputados: [{ nombre: 'Agustin Pellegrini', twitter: 'apellegrini2000', lista: '96' }]
+                deputados: [{ nombre: 'Agustin Pellegrini', twitter: 'apellegrini2000', lista: '96' }]
             },
             'SANTIAGO DEL ESTERO': {
                 senadores: [{ nombre: 'Tomas Figueroa', twitter: 'TomasFigueok', lista: '96' }],
-                diputados: [{ nombre: 'Laura Godoy', twitter: 'lauragodoy428', lista: '96' }]
+                deputados: [{ nombre: 'Laura Godoy', twitter: 'lauragodoy428', lista: '96' }]
             },
             'TIERRA DEL FUEGO': {
                 senadores: [{ nombre: 'Agustin Coto', twitter: 'agustcot', lista: '504' }],
-                diputados: [{ nombre: 'Miguel Rodriguez', twitter: 'MigueMiguerrock', lista: '504' }]
+                deputados: [{ nombre: 'Miguel Rodriguez', twitter: 'MigueMiguerrock', lista: '504' }]
             },
             'TUCUMAN': {
-                diputados: [{ nombre: 'Federico Pelli', twitter: 'pellifederico', lista: '502' }]
+                deputados: [{ nombre: 'Federico Pelli', twitter: 'pellifederico', lista: '502' }]
             },
             'todas': 'CABA'
         };
@@ -339,7 +589,6 @@
                     html += `<img src="https://i.ibb.co/yzWX8TV/CABA-BULLRICH.jpg" alt="${candidato.nombre}">`;
                 } else if (candidato.nombre === 'Alejandro Fargosi') {
                     html += `<img src="https://i.ibb.co/LDXNwCmM/CABA-FARGOSI.jpg" alt="${candidato.nombre}">`;
-                
                 } else if (candidato.nombre === 'Joaquín Benegas Lynch') {
                     html += `<img src="https://i.ibb.co/DDQLWjYV/ENTRE-RIOS-BENEGAS.jpg" alt="${candidato.nombre}">`;
                 } else if (candidato.nombre === 'Andrés Laumann') {
@@ -369,8 +618,8 @@
                 } else if (candidato.nombre === 'Miguel Rodriguez') {
                     html += `<img src="https://i.ibb.co/JF76rmd4/TIERRA-DEL-FUEGO-RODRIGUEZ.jpg" alt="${candidato.nombre}">`;
                 } else if (candidato.nombre === 'Adrián Brizuela') {
-    html += `<img src="https://i.ibb.co/HLFJF00H/CATAMARCA-BRIZUELA.jpg" alt="${candidato.nombre}">`; // Placeholder temporal
-              } else if (candidato.nombre === 'Maira Raquel Frias') {
+                    html += `<img src="https://i.ibb.co/HLFJF00H/CATAMARCA-BRIZUELA.jpg" alt="${candidato.nombre}">`;
+                } else if (candidato.nombre === 'Maira Raquel Frias') {
                     html += `<img src="https://i.ibb.co/JFsbWJ3W/CHUBUT-FRIAS.jpg" alt="${candidato.nombre}">`;
                 } else if (candidato.nombre === 'Gonzalo Roca') {
                     html += `<img src="https://i.ibb.co/5WCvnxLW/CORDOBA-ROCA.jpg" alt="${candidato.nombre}">`;
@@ -416,14 +665,13 @@
             }
             html += `</div>`;
             return html;
-        
         }
 
         function generarSeccion(legislativo, tipo) {
             if (!legislativo || legislativo.length === 0) return '';
-            let html = `<div class="seccion-legislativo"><h3>Candidatos a ${tipo}</h3><div class="candidatos-container" data-position-type="${tipo}">`;
+            let html = `<div class="seccion-legislativo" data-position-type="${tipo}"><h3>Candidatos a ${tipo}</h3><div class="candidatos-container" data-position-type="${tipo}">`;
             legislativo.forEach(c => {
-                html += generarCandidato(c, tipo, null); // Pasar null como senatorImage para que use la lógica de generarCandidato
+                html += generarCandidato(c, tipo, null);
             });
             html += `</div></div>`;
             return html;
