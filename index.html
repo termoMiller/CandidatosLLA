@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conocé a los Candidatos de La Libertad Avanza</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('https://i.ibb.co/Z6Q29JdX/crear-fondo-violeta.png');
+            background-repeat: repeat; /* Repite la imagen como mosaico */
+            background-color: #6a0dad; /* Color de fondo por si la imagen no carga, opcional */
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .banner {
+            text-align: center;
+            background-color: #6a0dad;
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        .subtitulo {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.2em;
+            color: #6a0dad;
+        }
+        .enlaces-lista {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+        .enlace-item {
+            text-align: center;
+            margin: 10px;
+        }
+        .enlace-item a {
+            color: #6a0dad;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .enlace-item a:hover {
+            text-decoration: underline;
+        }
+        .seleccion-prov {
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: bold;
+            color: #6a0dad;
+        }
+        select {
+            padding: 10px;
+            font-size: 1em;
+            border: 2px solid #6a0dad;
+            border-radius: 5px;
+            background-color: white;
+        }
+        .titulo-prov {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 1.3em;
+            color: #6a0dad;
+            font-weight: bold;
+        }
+        .seccion-legislativo h3 {
+            text-align: center;
+            color: #6a0dad;
+            margin-bottom: 15px;
+        }
+        .candidatos-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        .candidato {
+            border: 2px solid #6a0dad;
+            border-radius: 50px;
+            padding: 10px;
+            background-color: white;
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 300px;
+        }
+        .candidato:hover {
+            transform: scale(1.05);
+        }
+        .candidato .name {
+            font-size: 1.1em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .candidato img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .candidato .lista {
+            font-size: 0.9em;
+            color: #6a0dad;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .candidato .twitter-link {
+            color: #6a0dad;
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center;
+            display: block;
+        }
+        .candidato .twitter-link:hover {
+            text-decoration: underline;
+        }
+        .candidatos-container.two-same-position .candidato {
+            width: 40%;
+        }
+        .candidatos-container.one-candidate .candidato {
+            width: 60%;
+        }
+        .candidatos-container.two-different-positions .candidato {
+            width: 80%;
+        }
+        @media (max-width: 1024px) {
+            .candidatos-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .candidato {
+                width: 100%;
+                max-width: 400px;
+            }
+            .enlaces-lista {
+                flex-direction: column;
+            }
+        }
+        @media (max-width: 768px) {
+            .candidato {
+                max-width: 300px;
+            }
+            .container {
+                padding: 10px;
+            }
+        }
+        @media (max-width: 480px) {
+            .banner {
+                padding: 20px;
+                font-size: 1.2em;
+            }
+            .subtitulo {
+                font-size: 1em;
+            }
+            .enlaces-lista .enlace-item {
+                margin: 5px 0;
+            }
+            .candidato {
+                max-width: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="banner">
+            Conocé a los Candidatos de La Libertad Avanza
+        </div>
+        <div class="subtitulo">
+            Unite a la Legión de FISCALES que va a defender el proyecto de LA LIBERTAD y de JAVIER MILEI, 
+            completá este formulario (<a href="https://docs.google.com/forms/d/e/1FAIpQLSeB_x3qDbYWd4E14Cv5y83gq1rKRe4Ol16yhsUp2pZjzPGlrA/viewform" target="_blank">enlace al formulario</a>) o contactalos AQUÍ
+        </div>
+        <div class="enlaces-lista">
+            <div class="enlace-item">
+                <a href="https://x.com/enelojodelpoder" target="_blank">1) En el Ojo del Poder</a>
+            </div>
+            <div class="enlace-item">
+                <a href="https://x.com/matias_vorrath" target="_blank">2) Matias Vorrath</a>
+            </div>
+            <div class="enlace-item">
+                <a href="https://x.com/OliviaGagliesi" target="_blank">3) Olivia Gagliesi</a>
+            </div>
+            <div class="enlace-item">
+                <a href="https://x.com/evaraaranda" target="_blank">4) Evara Aranda</a>
+            </div>
+        </div>
+        <div class="seleccion-prov">
+            Seleccione su provincia:
+            <select id="provinciaSelect">
+                <option value="todas">Todas</option>
+                <option value="CABA">Ciudad Autónoma de Buenos Aires</option>
+                <option value="CATAMARCA">Catamarca</option>
+                <option value="CHACO">Chaco</option>
+                <option value="CHUBUT">Chubut</option>
+                <option value="CORDOBA">Córdoba</option>
+                <option value="CORRIENTES">Corrientes</option>
+                <option value="ENTRE RIOS">Entre Ríos</option>
+                <option value="FORMOSA">Formosa</option>
+                <option value="JUJUY">Jujuy</option>
+                <option value="LA PAMPA">La Pampa</option>
+                <option value="LA RIOJA">La Rioja</option>
+                <option value="MENDOZA">Mendoza</option>
+                <option value="MISIONES">Misiones</option>
+                <option value="NEUQUEN">Neuquén</option>
+                <option value="PBA">Buenos Aires</option>
+                <option value="RIO NEGRO">Río Negro</option>
+                <option value="SALTA">Salta</option>
+                <option value="SAN JUAN">San Juan</option>
+                <option value="SAN LUIS">San Luis</option>
+                <option value="SANTA CRUZ">Santa Cruz</option>
+                <option value="SANTA FE">Santa Fe</option>
+                <option value="SANTIAGO DEL ESTERO">Santiago del Estero</option>
+                <option value="TIERRA DEL FUEGO">Tierra del Fuego</option>
+                <option value="TUCUMAN">Tucumán</option>
+            </select>
+        </div>
+        <div id="contenidoProvincia">
+            <!-- Contenido dinámico se insertará aquí -->
+        </div>
+    </div>
+
+    <script>
+        const candidatos = {
+            'CABA': {
+                senadores: [
+                    { nombre: 'Patricia Bullrich', twitter: 'PatoBullrich', lista: '501' },
+                    { nombre: 'Agustín Monteverde', twitter: 'Ag_Monteverde', lista: '501' }
+                ],
+                diputados: [
+                    { nombre: 'Alejandro Fargosi', twitter: 'fargosi', lista: '501' },
+                    { nombre: 'Patricia Holzman', twitter: 'PatriciaHolzman', lista: '501' }
+                ]
+            },
+            'CATAMARCA': {
+                diputados: [{ nombre: 'Adrián Brizuela', lista: '503' }]
+            },
+            'CHACO': {
+                senadores: [{ nombre: 'Juan Cruz Godoy', twitter: 'JuanCruzGodoy', lista: '504' }],
+                diputados: [{ nombre: 'Mercedes del Rosario Goitia', twitter: 'MercedesGoitia', lista: '504' }]
+            },
+            'CHUBUT': {
+                diputados: [{ nombre: 'Maira Raquel Frias', lista: '505' }]
+            },
+            'CORDOBA': {
+                diputados: [{ nombre: 'Gonzalo Roca', twitter: 'GonzaloRoca', lista: '506' }]
+            },
+            'CORRIENTES': {
+                diputados: [{ nombre: 'Virgina Gallardo', twitter: 'VirginaGallardo', lista: '507' }]
+            },
+            'ENTRE RIOS': {
+                senadores: [{ nombre: 'Joaquín Benegas Lynch', twitter: 'JBenegasLynch', lista: '508' }],
+                diputados: [{ nombre: 'Andrés Laumann', twitter: 'AndresLaumann', lista: '508' }]
+            },
+            'FORMOSA': {
+                diputados: [{ nombre: 'Atilio Basualdo', twitter: 'AtilioBasualdo', lista: '509' }]
+            },
+            'JUJUY': {
+                diputados: [{ nombre: 'Alfi Gonzales', twitter: 'AlfiGonzales', lista: '510' }]
+            },
+            'LA PAMPA': {
+                diputados: [{ nombre: 'Adrian Ravier', twitter: 'AdrianRavier', lista: '511' }]
+            },
+            'LA RIOJA': {
+                diputados: [{ nombre: 'Gino Visconti', twitter: 'GinoVisconti', lista: '512' }]
+            },
+            'MENDOZA': {
+                diputados: [{ nombre: 'Luis Petri', twitter: 'LuisPetri', lista: '513' }]
+            },
+            'MISIONES': {
+                diputados: [{ nombre: 'Diego Hartfield', twitter: 'DiegoHartfield', lista: '514' }]
+            },
+            'NEUQUEN': {
+                senadores: [{ nombre: 'Nadia Marquez', twitter: 'NadiaMarquez', lista: '515' }],
+                diputados: [{ nombre: 'Gaston Riesco', twitter: 'GastonRiesco', lista: '515' }]
+            },
+            'PBA': {
+                diputados: [{ nombre: 'Jose Luis Espert', twitter: 'JoseLuisEspert', lista: '516' }]
+            },
+            'RIO NEGRO': {
+                senadores: [{ nombre: 'Lorena Villaverde', twitter: 'LorenaVillaverde', lista: '517' }],
+                diputados: [{ nombre: 'Anibal Tortoriello', twitter: 'AnibalTortoriello', lista: '517' }]
+            },
+            'SALTA': {
+                senadores: [{ nombre: 'Emilia Orozco', twitter: 'EmiliaOrozco', lista: '518' }],
+                diputados: [{ nombre: 'Gabriela Flores', twitter: 'GabrielaFlores', lista: '518' }]
+            },
+            'SAN JUAN': {
+                diputados: [{ nombre: 'Abel Chiconi', twitter: 'AbelChiconi', lista: '519' }]
+            },
+            'SAN LUIS': {
+                diputados: [{ nombre: 'Monica Becerra', twitter: 'MonicaBecerra', lista: '520' }]
+            },
+            'SANTA CRUZ': {
+                diputados: [{ nombre: 'Jairo Guzman', twitter: 'JairoGuzman', lista: '521' }]
+            },
+            'SANTA FE': {
+                diputados: [{ nombre: 'Agustin Pellegrini', twitter: 'AgustinPellegrini', lista: '522' }]
+            },
+            'SANTIAGO DEL ESTERO': {
+                senadores: [{ nombre: 'Tomas Figueroa', twitter: 'TomasFigueroa', lista: '523' }],
+                diputados: [{ nombre: 'Laura Godoy', twitter: 'LauraGodoy', lista: '523' }]
+            },
+            'TIERRA DEL FUEGO': {
+                senadores: [{ nombre: 'Agustin Coto', twitter: 'AgustinCoto', lista: '524' }],
+                diputados: [{ nombre: 'Miguel Rodriguez', twitter: 'MiguelRodriguez', lista: '524' }]
+            },
+            'TUCUMAN': {
+                diputados: [{ nombre: 'Federico Pelli', twitter: 'FedericoPelli', lista: '525' }]
+            },
+            'todas': 'CABA'
+        };
+
+        function generarCandidato(candidato, positionType, senatorImage) {
+            let html = `<div class="candidato">`;
+            html += `<div class="name">${candidato.nombre}</div>`;
+            if (candidato.twitter) {
+                html += `<a href="https://x.com/${candidato.twitter}" target="_blank" class="twitter-link">`;
+                if (positionType === 'senadores' && senatorImage) {
+                    html += `<img src="${senatorImage}" alt="${candidato.nombre}">`;
+                } else if (candidato.nombre === 'Patricia Bullrich') {
+                    html += `<img src="https://i.ibb.co/yzWX8TV/CABA-BULLRICH.jpg" alt="${candidato.nombre}">`;
+                } else if (candidato.nombre === 'Agustín Monteverde') {
+                    html += `<img src="https://i.ibb.co/Kp531kyj/CABA-MONTEVERDE.jpg" alt="${candidato.nombre}">`;
+                } else if (candidato.nombre === 'Alejandro Fargosi') {
+                    html += `<img src="https://i.ibb.co/LDXNwCmM/CABA-FARGOSI.jpg" alt="${candidato.nombre}">`;
+                } else if (candidato.nombre === 'Patricia Holzman') {
+                    html += `<img src="https://i.ibb.co/q3B4P7yp/CABA-HOLZMAN.png" alt="${candidato.nombre}">`;
+                } else if (candidato.nombre === 'Joaquín Benegas Lynch') {
+                    html += `<img src="https://i.ibb.co/DDQLWjYV/ENTRE-RIOS-BENEGAS.jpg" alt="${candidato.nombre}">`;
+                } else if (candidato.nombre === 'Andrés Laumann') {
+                    html += `<img src="https://i.ibb.co/PGqP0H4M/ENTRE-RIOS-LAUMANN.jpg" alt="${candidato.nombre}">`;
+                } else if (candidato.nombre === 'Juan Cruz Godoy') {
+                    html += `<img src="https://i.ibb.co/MDsqd1mW/CHACO-CRUZ-GODOY.jpg" alt="${candidato.nombre}">`;
+                } else if (candidato.nombre === 'Mercedes del Rosario Goitia') {
+                    html += `<img src="https://i.ibb.co/ds9SH7bL/CHACO-GOITIA.jpg" alt="${candidato.nombre}">`;
+                } else if (candidato.nombre === 'Nadia Marquez') {
+                    html += `<img src="https://i.ibb.co/kgwD3fbV/NEUQUEN-MARQUEZ.jpg" alt="${candidato.nombre}">`;
+                } else if (candidato.nombre === 'Gaston Riesco') {
+                    html += `<img src="https://i.ibb.co/Kj46n1T4/NUEQUEN-RIESCO.jpg" alt="${candidato.nombre}">`;
+                } else if (candidato.nombre === 'Lorena Villaverde') {
+                    html += `<img src="https://i.ibb.co/N690L18H/RIO-NEGRO-VILLAVERDE.jpg" alt="${candidato.nombre}">`;
+                } else if (candidato.nombre === 'Anibal Tortoriello') {
+                    html += `<img src="https://i.ibb.co/Pv0HShnb/RIO-NEGRO-TORTORIELLO.jpg" alt="${candidato.nombre}">`;
+                } else if (candidato.nombre === 'Emilia Orozco') {
+                    html += `<img src="https://i.ibb.co/0RT64wGz/SALTA-OROZCO.jpg" alt="${candidato.nombre}">`;
+                } else if (candidato.nombre === 'Gabriela Flores') {
+                    html += `<img src="https://i.ibb.co/M5jKwsf1/SALTA-FLORES.jpg" alt="${candidato.nombre}">`;
+                } else if (candidato.nombre === 'Tomas Figueroa') {
+                    html += `<img src="https://i.ibb.co/spKJpNfG/SANTIAGO-DEL-ESTERO-FIGUEROA.jpg" alt="${candidato.nombre}">`;
+                } else if (candidato.nombre === 'Laura Godoy') {
+                    html += `<img src="https://i.ibb.co/5gRSdzsD/SANTIAGO-DEL-ESTERO-GODOY.jpg" alt="${candidato.nombre}">`;
+                } else if (candidato.nombre === 'Agustin Coto') {
+                    html += `<img src="https://i.ibb.co/xtgbRFBh/TIERRA-DEL-FUEGO-COTO.jpg" alt="${candidato.nombre}">`;
+                } else if (candidato.nombre === 'Miguel Rodriguez') {
+                    html += `<img src="https://i.ibb.co/JF76rmd4/TIERRA-DEL-FUEGO-RODRIGUEZ.jpg" alt="${candidato.nombre}">`;
+                } else if (candidato.nombre === 'Adrián Brizuela') {
+                    html += `<img src="https://i.ibb.co/HLFJF00H/CATAMARCA-BRIZUELA.jpg" alt="${candidato.nombre}">`;
+                } else if (candidato.nombre === 'Maira Raquel Frias') {
+                    html += `<img src="https://i.ibb.co/JFsbWJ3W/CHUBUT-FRIAS.jpg" alt="${candidato.nombre}">`;
+                } else if (candidato.nombre === 'Gonzalo Roca') {
+                    html += `<img src="https://i.ibb.co/5WCvnxLW/CORDOBA-ROCA.jpg" alt="${candidato.nombre}">`;
+                } else if (candidato.nombre === 'Virgina Gallardo') {
+                    html += `<img src="https://i.ibb.co/RGVQF4VC/CORRIENTES-GALLARDO.jpg" alt="${candidato.nombre}">`;
+                } else if (candidato.nombre === 'Atilio Basualdo') {
+                    html += `<img src="https://i.ibb.co/35vY9PdP/FORMOSA-BASUALDO.jpg" alt="${candidato.nombre}">`;
+                } else if (candidato.nombre === 'Alfi Gonzales') {
+                    html += `<img src="https://i.ibb.co/LX0hTb6q/JUJUY-GONZALEZ.jpg" alt="${candidato.nombre}">`;
+                } else if (candidato.nombre === 'Adrian Ravier') {
+                    html += `<img src="https://i.ibb.co/0RDChypY/LA-PAMPA-ADRIAN-RAVIER.jpg" alt="${candidato.nombre}">`;
+                } else if (candidato.nombre === 'Gino Visconti') {
+                    html += `<img src="https://i.ibb.co/HTs6HpmC/LA-RIOJA-VISCONTI.jpg" alt="${candidato.nombre}">`;
+                } else if (candidato.nombre === 'Luis Petri') {
+                    html += `<img src="https://i.ibb.co/Hf9Vm79d/MENDOZA-PETRI.jpg" alt="${candidato.nombre}">`;
+                } else if (candidato.nombre === 'Diego Hartfield') {
+                    html += `<img src="https://i.ibb.co/pvvQM3hW/MISIONES-HARTFIELD.jpg" alt="${candidato.nombre}">`;
+                } else if (candidato.nombre === 'Jose Luis Espert') {
+                    html += `<img src="https://i.ibb.co/4n4gsmBp/PBA-ESPERT.jpg" alt="${candidato.nombre}">`;
+                } else if (candidato.nombre === 'Abel Chiconi') {
+                    html += `<img src="https://i.ibb.co/ZpHjgk58/SAN-JUAN-CHICONI.jpg" alt="${candidato.nombre}">`;
+                } else if (candidato.nombre === 'Monica Becerra') {
+                    html += `<img src="https://i.ibb.co/ZzDMgBpM/SAN-LUIS-BECERRA.jpg" alt="${candidato.nombre}">`;
+                } else if (candidato.nombre === 'Jairo Guzman') {
+                    html += `<img src="https://i.ibb.co/XZ0z2ZD8/SANTA-CRUZ-GUZMAN.jpg" alt="${candidato.nombre}">`;
+                } else if (candidato.nombre === 'Agustin Pellegrini') {
+                    html += `<img src="https://i.ibb.co/LzWnB334/SANTA-FE-PELLEGRINI.jpg" alt="${candidato.nombre}">`;
+                } else if (candidato.nombre === 'Federico Pelli') {
+                    html += `<img src="https://i.ibb.co/8g7R3NTb/TUCUMAN-PELLI.jpg" alt="${candidato.nombre}">`;
+                } else {
+                    html += `<img src="https://via.placeholder.com/100?text=${candidato.nombre}" alt="${candidato.nombre}">`;
+                }
+            }
+            if (candidato.lista) {
+                html += `<div class="lista">Lista ${candidato.lista}</div>`;
+            }
+            if (candidato.twitter) {
+                html += `<a href="https://x.com/${candidato.twitter}" target="_blank" class="twitter-link">@${candidato.twitter}</a>`;
+            } else {
+                html += `<span>Sin Twitter</span>`;
+            }
+            html += `</div>`;
+            return html;
+        }
+
+        function generarSeccion(legislativo, tipo) {
+            if (!legislativo || legislativo.length === 0) return '';
+            let html = `<div class="seccion-legislativo"><h3>Candidatos a ${tipo}</h3><div class="candidatos-container" data-position-type="${tipo}">`;
+            legislativo.forEach(c => {
+                html += generarCandidato(c, tipo, null); // Pasar null como senatorImage para que use la lógica de generarCandidato
+            });
+            html += `</div></div>`;
+            return html;
+        }
+
+        function mostrarProvincia(prov) {
+            let contenido = '';
+            if (prov === 'todas') {
+                Object.keys(candidatos).forEach(p => {
+                    if (p !== 'todas') {
+                        const data = candidatos[p];
+                        contenido += `<div class="titulo-prov">PROVINCIA: ${p}</div>`;
+                        if (data.senadores) contenido += generarSeccion(data.senadores, 'senadores');
+                        if (data.diputados) contenido += generarSeccion(data.diputados, 'diputados');
+                    }
+                });
+            } else {
+                const data = candidatos[prov];
+                if (data) {
+                    contenido += `<div class="titulo-prov">PROVINCIA: ${prov}</div>`;
+                    if (data.senadores) contenido += generarSeccion(data.senadores, 'senadores');
+                    if (data.diputados) contenido += generarSeccion(data.diputados, 'diputados');
+                } else {
+                    contenido = '<p>No hay datos para esta provincia.</p>';
+                }
+            }
+            document.getElementById('contenidoProvincia').innerHTML = contenido;
+        }
+
+        function adjustCandidateWidths() {
+            const containers = document.querySelectorAll('.candidatos-container');
+            containers.forEach(container => {
+                const count = container.children.length;
+                const positionType = container.getAttribute('data-position-type');
+                if (count === 1) {
+                    container.classList.add('one-candidate');
+                    container.classList.remove('two-same-position', 'two-different-positions');
+                } else if (count === 2 && positionType) {
+                    container.classList.add('two-same-position');
+                    container.classList.remove('one-candidate', 'two-different-positions');
+                } else {
+                    container.classList.add('two-different-positions');
+                    container.classList.remove('one-candidate', 'two-same-position');
+                }
+            });
+        }
+
+        document.getElementById('provinciaSelect').addEventListener('change', function() {
+            const prov = this.value;
+            mostrarProvincia(prov);
+            adjustCandidateWidths();
+        });
+
+        window.addEventListener('load', () => {
+            mostrarProvincia('todas');
+            adjustCandidateWidths();
+        });
+    </script>
+</body>
+</html>
